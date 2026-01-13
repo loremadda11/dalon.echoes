@@ -15,13 +15,69 @@ const { title } = Astro.props;
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
- 
-    <!-- Global styles -->
-    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   </head>
   <body>
     <slot />
   </body>
 </html>
+
+<style is:global>
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    /* Palette beige/crema */
+    --bg-primary: #FAF7F0;
+    --bg-secondary: #F5F1E8;
+    --text-primary: #1A1A1A;
+    --text-secondary: #4A4A4A;
+    --accent: #B85C38;
+    
+    /* Typography */
+    --font-display: 'Archivo', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+    border-radius: 4px;
+  }
+</style>
