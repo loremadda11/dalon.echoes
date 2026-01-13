@@ -2,11 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Dalon - Music Producer">
+<Layout title="Dalon">
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav-content">
-      <span class="logo">DALON</span>
+      <img src="/logo.svg" alt="Dalon" class="logo-img">
       <div class="nav-links">
         <a href="#about">ABOUT</a>
         <a href="#music">MUSIC</a>
@@ -89,6 +89,11 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 800;
     letter-spacing: 0.1em;
   }
+
+  .logo-img {
+  height: 2.5rem; /* Regola altezza come preferisci */
+  width: auto;
+}
 
   .nav-links {
     display: flex;
